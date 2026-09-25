@@ -6,8 +6,8 @@ use bevy::{
     log::LogPlugin,
     prelude::*,
     render::{
-        camera::CameraOutputMode, settings::WgpuSettings, view::RenderLayers, RenderDebugFlags,
-        RenderPlugin,
+        camera::CameraOutputMode, render_resource::PipelineCompilationMode, settings::WgpuSettings,
+        view::RenderLayers, RenderDebugFlags, RenderPlugin,
     },
     text::{TextColor, TextFont},
     ui::{
@@ -92,7 +92,7 @@ impl DemoApp {
                     })
                     .set(RenderPlugin {
                         render_creation: self.wgpu_settings.into(),
-                        synchronous_pipeline_compilation: false,
+                        pipeline_compilation_mode: PipelineCompilationMode::Async,
                         debug_flags: RenderDebugFlags::empty(),
                     })
                     .set(WindowPlugin {
@@ -201,7 +201,7 @@ fn spawn_demo_ui(mut cmd: Commands, demo: Res<Demo>) {
             ..default()
         },
         BackgroundColor(Color::linear_rgba(0., 0., 0., 0.8)),
-        BorderColor(Color::linear_rgb(0.8, 0.8, 0.8)),
+        BorderColor::all(Color::linear_rgb(0.8, 0.8, 0.8)),
         BorderRadius::all(Val::Px(8.)),
         ZIndex(3000),
         children![

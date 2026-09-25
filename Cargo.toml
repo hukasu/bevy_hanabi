@@ -188,3 +188,23 @@ required-features = ["bevy/bevy_winit", "bevy/bevy_window"]
 [workspace]
 resolver = "2"
 members = ["."]
+
+[patch.crates-io]
+bevy = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
+bevy_a11y = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
+bevy_asset = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
+bevy_app = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
+bevy_derive = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
+bevy_ecs = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
+bevy_image = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
+bevy_input = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
+bevy_log = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
+bevy_math = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
+bevy_color = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
+bevy_transform = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
+bevy_reflect = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
+bevy_render = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
+bevy_time = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
+bevy_winit = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
+bevy_window = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
+bevy_platform = { git = "https://github.com/robtfm/bevy", branch = "release-0.16-dcl" }
